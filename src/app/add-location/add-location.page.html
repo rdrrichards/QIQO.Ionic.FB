@@ -1,0 +1,38 @@
+<ion-header>
+  <ion-toolbar>
+    <ion-title>add-location</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content padding>
+  <form [formGroup]="locationForm" (ngSubmit)="saveLocation()">
+    <ion-list>
+      <ion-item>
+        <ion-label fixed>Name</ion-label>
+        <ion-input type="text" name="locationName" formControlName="name"></ion-input>
+      </ion-item>
+
+      <ion-item>
+        <ion-label fixed>Desciption</ion-label>
+        <ion-input type="text" name="locationDesc" formControlName="description"></ion-input>
+      </ion-item>
+
+      <ion-item>
+        <ion-label fixed>City</ion-label>
+        <ion-input type="text" name="locationCity" formControlName="city"></ion-input>
+      </ion-item>
+
+      <ion-item>
+        <ion-label fixed>State</ion-label>
+        <ion-input type="text" name="locationState" formControlName="state"></ion-input>
+      </ion-item>
+
+      <ion-item>
+        <ion-label fixed>Zip</ion-label>
+        <ion-input type="text" name="locationPostal" formControlName="postalCode"></ion-input>
+      </ion-item>
+
+    </ion-list>
+    <button ion-button type="submit">Add</button>
+  </form>
+</ion-content>
