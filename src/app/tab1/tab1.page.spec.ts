@@ -1,7 +1,12 @@
 import { CUSTOM_ELEMENTS_SCHEMA } from '@angular/core';
 import { async, ComponentFixture, TestBed } from '@angular/core/testing';
+import { RouterTestingModule } from '@angular/router/testing';
+import { AngularFireModule } from 'angularfire2';
+import { AngularFireDatabaseModule } from 'angularfire2/database';
+import { AngularFireAuthModule } from 'angularfire2/auth';
 
 import { Tab1Page } from './tab1.page';
+import { environment } from 'src/environments/environment';
 
 describe('Tab1Page', () => {
   let component: Tab1Page;
@@ -11,6 +16,10 @@ describe('Tab1Page', () => {
     TestBed.configureTestingModule({
       declarations: [Tab1Page],
       schemas: [CUSTOM_ELEMENTS_SCHEMA],
+      imports: [RouterTestingModule,
+        AngularFireModule.initializeApp(environment.firebase),
+        AngularFireDatabaseModule,
+        AngularFireAuthModule]
     }).compileComponents();
   }));
 

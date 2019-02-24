@@ -1,2 +1,2 @@
-CALL ng b --prod
+CALL ionic build
 CALL ng t --watch=false
