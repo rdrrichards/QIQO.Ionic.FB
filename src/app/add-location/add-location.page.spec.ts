@@ -32,6 +32,7 @@ describe('AddLocationPage', () => {
   });
 
   it('should create', () => {
+    component.locationForm = component.buildForm();
     expect(component).toBeTruthy();
   });
 });
