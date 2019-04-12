@@ -9,7 +9,7 @@ import { ViewLocationPage } from './view-location.page';
 
 const routes: Routes = [
   {
-    path: '',
+    path: ':id',
     component: ViewLocationPage
   }
 ];

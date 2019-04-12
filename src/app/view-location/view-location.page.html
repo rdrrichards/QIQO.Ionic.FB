@@ -1,9 +1,17 @@
 <ion-header>
   <ion-toolbar>
-    <ion-title>view-location</ion-title>
+    <ion-title>View Location - {{ currentLocation?.name }}</ion-title>
   </ion-toolbar>
 </ion-header>
 
 <ion-content padding>
-
+  <div *ngIf="currentLocation">
+    <div>Location Name: {{ currentLocation.name }}</div>
+    <div>Description: {{ currentLocation.description }}</div>
+    <div>City: {{ currentLocation.city }}</div>
+    <div>State: {{ currentLocation.state }}</div>
+    <div>Postal Code: {{ currentLocation.postalCode }}</div>
+    <ion-button color="primary" (click)="editLocation()">Edit</ion-button>
+    <ion-button color="secondary" (click)="return()">Return</ion-button>
+  </div>
 </ion-content>

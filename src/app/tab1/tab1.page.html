@@ -7,8 +7,8 @@
 </ion-header>
 
 <ion-content padding>
-  <ion-buttons *ngFor="let loc of locations; index as i" >
-    <button ion-button color="primary" (click)="clickLocation(loc.key)">{{loc.name}}</button>
-  </ion-buttons>
-  <button ion-button [routerLink]="['/add-location']" >Add New Location</button>
+  <div *ngFor="let loc of locations; index as i" >
+    <ion-button color="dark" (click)="clickLocation(loc.key)">{{loc.name}}</ion-button>
+  </div>
+  <ion-button color="primary" [routerLink]="['/add-location']" >Add New Location</ion-button>
 </ion-content>
