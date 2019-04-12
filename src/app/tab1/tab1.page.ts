@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { LocationService } from '../services/location.service';
+import { Router } from '@angular/router';
 
 @Component({
   selector: 'app-tab1',
@@ -8,7 +9,7 @@ import { LocationService } from '../services/location.service';
 })
 export class Tab1Page implements OnInit {
   locations: any[];
-  constructor(private locationService: LocationService) {}
+  constructor(private locationService: LocationService, private router: Router) {}
   ngOnInit() {
     this.locationService.getLocations().subscribe(
       locations => {
@@ -18,9 +19,6 @@ export class Tab1Page implements OnInit {
     );
   }
   clickLocation(key: string) {
-    // this.navCtrl.push(ViewLocationPage, key);
-  }
-  addLocation() {
-    // this.navCtrl.push(AddLocationPage);
+    this.router.navigate(['/view-location', key]);
   }
 }
