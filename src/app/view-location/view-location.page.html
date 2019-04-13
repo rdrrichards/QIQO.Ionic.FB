@@ -5,13 +5,21 @@
 </ion-header>
 
 <ion-content padding>
-  <div *ngIf="currentLocation">
-    <div>Location Name: {{ currentLocation.name }}</div>
-    <div>Description: {{ currentLocation.description }}</div>
-    <div>City: {{ currentLocation.city }}</div>
-    <div>State: {{ currentLocation.state }}</div>
-    <div>Postal Code: {{ currentLocation.postalCode }}</div>
-    <ion-button color="primary" (click)="editLocation()">Edit</ion-button>
-    <ion-button color="secondary" (click)="return()">Return</ion-button>
-  </div>
+    <ion-card *ngIf="currentLocation">
+      <ion-item>
+        <ion-icon name="pin" slot="start"></ion-icon>
+        <ion-label>{{ currentLocation.name }}</ion-label>
+        <ion-button fill="outline" slot="end" (click)="editLocation()">Edit</ion-button>
+        <ion-button fill="outline" slot="end" (click)="return()">Return</ion-button>
+      </ion-item>
+    
+      <ion-card-content>
+        <div>
+          <div>Description: {{ currentLocation.description }}</div>
+          <div>City: {{ currentLocation.city }}</div>
+          <div>State: {{ currentLocation.state }}</div>
+          <div>Postal Code: {{ currentLocation.postalCode }}</div>
+        </div>
+      </ion-card-content>
+    </ion-card>
 </ion-content>
