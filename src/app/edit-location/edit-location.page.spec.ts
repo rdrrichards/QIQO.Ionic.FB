@@ -2,7 +2,8 @@ import { CUSTOM_ELEMENTS_SCHEMA } from '@angular/core';
 import { async, ComponentFixture, TestBed } from '@angular/core/testing';
 
 import { EditLocationPage } from './edit-location.page';
-import { FormsModule } from '@angular/forms';
+import { FormsModule, ReactiveFormsModule } from '@angular/forms';
+import { RouterTestingModule } from '@angular/router/testing';
 
 describe('EditLocationPage', () => {
   let component: EditLocationPage;
@@ -12,7 +13,7 @@ describe('EditLocationPage', () => {
     TestBed.configureTestingModule({
       declarations: [ EditLocationPage ],
       schemas: [CUSTOM_ELEMENTS_SCHEMA],
-      imports: [ FormsModule ]
+      imports: [ FormsModule, ReactiveFormsModule, RouterTestingModule ]
     })
     .compileComponents();
   }));

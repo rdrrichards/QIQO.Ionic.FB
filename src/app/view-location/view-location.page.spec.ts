@@ -3,6 +3,7 @@ import { async, ComponentFixture, TestBed } from '@angular/core/testing';
 import { RouterTestingModule } from '@angular/router/testing';
 
 import { ViewLocationPage } from './view-location.page';
+import { AngularFireDatabase } from 'angularfire2/database';
 
 describe('ViewLocationPage', () => {
   let component: ViewLocationPage;
@@ -12,7 +13,8 @@ describe('ViewLocationPage', () => {
     TestBed.configureTestingModule({
       declarations: [ ViewLocationPage ],
       schemas: [CUSTOM_ELEMENTS_SCHEMA],
-      imports: [RouterTestingModule]
+      imports: [RouterTestingModule],
+      providers: [AngularFireDatabase]
     })
     .compileComponents();
   }));
