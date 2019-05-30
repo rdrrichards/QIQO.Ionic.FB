@@ -12,6 +12,7 @@ import { environment } from 'src/environments/environment';
 describe('AddLocationPage', () => {
   let component: AddLocationPage;
   let fixture: ComponentFixture<AddLocationPage>;
+  const fb = new FormBuilder();
 
   beforeEach(async(() => {
     TestBed.configureTestingModule({
@@ -20,8 +21,7 @@ describe('AddLocationPage', () => {
       imports: [ReactiveFormsModule, RouterTestingModule,
         AngularFireModule.initializeApp(environment.firebase),
         AngularFireDatabaseModule,
-        AngularFireAuthModule],
-      providers: [FormBuilder]
+        AngularFireAuthModule]
     })
     .compileComponents();
   }));
@@ -29,13 +29,13 @@ describe('AddLocationPage', () => {
   beforeEach(() => {
     fixture = TestBed.createComponent(AddLocationPage);
     component = fixture.componentInstance;
-    // component.locationForm = new FormGroup({ name: '' });
-    //   name: ['', Validators.required],
-    //   description: ['', Validators.required],
-    //   city: ['', Validators.required],
-    //   state: ['', Validators.required],
-    //   postalCode: ['', Validators.required]
-    // });
+    component.locationForm = fb.group({
+      name: [''],
+      description: [''],
+      city: [''],
+      state: [''],
+      postalCode: ['']
+    });
     fixture.detectChanges();
   });
 
