@@ -4,6 +4,10 @@ import { async, ComponentFixture, TestBed } from '@angular/core/testing';
 import { EditLocationPage } from './edit-location.page';
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { RouterTestingModule } from '@angular/router/testing';
+import { AngularFireModule } from 'angularfire2';
+import { environment } from 'src/environments/environment';
+import { AngularFireDatabaseModule } from 'angularfire2/database';
+import { AngularFireAuthModule } from 'angularfire2/auth';
 
 describe('EditLocationPage', () => {
   let component: EditLocationPage;
@@ -13,7 +17,10 @@ describe('EditLocationPage', () => {
     TestBed.configureTestingModule({
       declarations: [ EditLocationPage ],
       schemas: [CUSTOM_ELEMENTS_SCHEMA],
-      imports: [ FormsModule, ReactiveFormsModule, RouterTestingModule ]
+      imports: [ FormsModule, ReactiveFormsModule, RouterTestingModule,
+        AngularFireModule.initializeApp(environment.firebase),
+        AngularFireDatabaseModule,
+        AngularFireAuthModule ]
     })
     .compileComponents();
   }));
