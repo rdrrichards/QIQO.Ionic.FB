@@ -29,7 +29,7 @@
     "firebase": "^6.0.2",
     "g": "^2.0.1",
     "rxjs": "~6.5.2",
-    "zone.js": "~0.8.29"
+    "zone.js": "~0.8.26"
   },
   "devDependencies": {
     "@angular-devkit/architect": "~0.13.9",
