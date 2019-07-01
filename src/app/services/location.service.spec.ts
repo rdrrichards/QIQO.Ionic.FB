@@ -1,7 +1,7 @@
 import { TestBed } from '@angular/core/testing';
 import { LocationService } from './location.service';
 import { of } from 'rxjs';
-import { AngularFireDatabase } from 'angularfire2/database';
+import { AngularFireDatabase } from '@angular/fire/database';
 
 const input: any[] = [
   { name: 'Location I', description: 'Location I Description', city: 'Nashville', state: 'TN', postalCode: '37211'},
