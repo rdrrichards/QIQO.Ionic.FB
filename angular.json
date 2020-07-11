@@ -40,7 +40,13 @@
                 "input": "src/global.scss"
               }
             ],
-            "scripts": []
+            "scripts": [],
+            "allowedCommonJsDependencies": [
+              "firebase/app",
+              "@firebase/app",
+              "@firebase/database",
+              "@firebase/util"
+            ]
           },
           "configurations": {
             "production": {
