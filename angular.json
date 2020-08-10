@@ -45,7 +45,9 @@
               "firebase/app",
               "@firebase/app",
               "@firebase/database",
-              "@firebase/util"
+              "@firebase/util",
+              "@firebase/auth",
+              "@firebase/component"
             ]
           },
           "configurations": {
